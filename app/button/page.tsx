@@ -1,20 +1,19 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+'use client'
 
-'use client';
+import * as React from 'react';
+import { Button } from '@/components/ui/button';
 
 export default function ButtonPage() {
   function handleClick() {
-    console.log('Button clicked! Throwing an error now...');
-    throw new Error('Code has been broken!');
+    console.log('Button clicked - breaking the page...');
+    throw new Error('The page has been broken.');
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-2xl font-bold mb-4">Break the Code</h1>
-      <Button onClick={handleClick} variant="default">
-        Break Code
+    <main className="flex items-center justify-center h-screen">
+      <Button variant="default" onClick={handleClick}>
+        Break the Page
       </Button>
-    </div>
+    </main>
   );
 }
