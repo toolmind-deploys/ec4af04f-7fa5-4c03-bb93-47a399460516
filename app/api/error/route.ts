@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  console.log('API called: /api/error');
+  console.log('GET /api/error called');
+
   const data = {
-    message: 'Placeholder response from /api/error.',
-    status: 'OK'
+    status: 'error route success',
+    message: 'Placeholder data from /api/error',
   };
+
   return NextResponse.json(data);
 }
